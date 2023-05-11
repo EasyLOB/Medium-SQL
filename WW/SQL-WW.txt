@@ -1,0 +1,51 @@
+SQL WW
+
+
+WordPress
+WooCommerce
+
+
+:: WordPress
+
+WordPress Database
+https://codex.wordpress.org/Database_Description
+
+wp_users
+    wp_usermeta
+    wp_comments
+        wp_commentmeta
+    { wp_posts }
+wp_posts : Posts | Pages
+    wp_postmeta
+    { wp_term_relationships }
+wp_term : Categories for Posts and Links | Tags for Posts
+    wp_termmeta
+    wp_term_taxonomy
+        wp_term_relationships
+wp_options
+wp_links { DEPRECATED }
+
+
+:: WooCommerce
+
+WooCommerce Database
+https://github.com/woocommerce/woocommerce/wiki/Database-Description
+
+woocommerce_api_keys
+woocommerce_attribute_taxonomies
+woocommerce_downloadable_product_permissions
+woocommerce_order_items
+    woocommerce_order_itemmeta
+woocommerce_tax_rates
+    woocommerce_tax_rate_locations
+woocommerce_shipping_zones
+    woocommerce_shipping_zone_locations
+    woocommerce_shipping_zone_methods
+woocommerce_payment_tokens
+    woocommerce_payment_tokenmeta
+woocommerce_log
+woocommerce_sessions
+wc_download_log
+wc_product_meta_lookup
+wc_tax_rate_classes
+wc_webhooks
